@@ -156,21 +156,27 @@ header nav ul li a img {
 }
 
 .quote {
-  font-family: "Spectral";
-  font-style: italic;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.quote figure {
   width: 70%;
-  margin: auto;
-  padding-block: 3em;
 }
-.quote__text {
-  font-family: Spectral;
-  font-style: italic;
-  font-weight: 300;
-}
-.quote__author {
-  font-family: Spectral;
+
+.quote figure figcaption {
+  font-family: "Spectral";
   font-weight: 800;
   font-size: 22px;
+}
+
+.quote figure blockquote h3 {
+  font-family: "Spectral";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 #services {
