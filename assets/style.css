@@ -286,14 +286,44 @@ header nav ul li a img {
 }
 
 footer {
+  display: flex;
   background-color: #ffffff;
   color: black;
-  padding: 100px;
+  padding-top: 50px;
+}
+
+footer .renseignements {
+  background-color: #f6d2b8;
+  width: 100%;
+  padding: 30px 80px 30px 80px;
 }
 
 footer .renseignements h4 {
   font-size: 20px;
+  padding-bottom: 20px;
 }
+
+footer .renseignements span {
+  font-size: 16px;
+}
+
+footer .renseignements i {
+  font-size: 15px;
+}
+
+footer .renseignements .medias-icones i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+footer .renseignements .medias-icones i:hover {
+  color: #beb45a;
+}
+
+footer .copyright {
+  font-size: 12px;
+}
+
 @media all and (max-width: 1180px) {
   .picture {
     flex: 2;
