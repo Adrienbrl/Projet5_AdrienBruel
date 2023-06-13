@@ -59,7 +59,7 @@ header nav ul li a img {
   position: relative;
 }
 
-#about .picture.left::before {
+#about .nina::before {
   content: " ";
   background-color: #e5975f;
   width: 374px;
@@ -70,13 +70,13 @@ header nav ul li a img {
   z-index: -1;
 }
 
-#about .picture {
+#about .nina {
   flex: 1;
   margin: 0 20px;
   z-index: 0;
 }
 
-#about .picture img {
+#about .nina img {
   width: 100%;
 }
 
@@ -157,13 +157,9 @@ header nav ul li a img {
 }
 
 .quote {
-  display: flex;
-  width: 100%;
-  padding: 50px 0;
-}
-
-.quote figure {
   width: 70%;
+  padding: 50px 0;
+  margin: auto;
 }
 
 .quote figure figcaption {
@@ -176,6 +172,7 @@ header nav ul li a img {
   font-family: "Spectral";
   font-style: italic;
   font-weight: 300;
+  font-size: 2.5rem;
 }
 
 #services {
@@ -183,6 +180,19 @@ header nav ul li a img {
   background-color: #a8d5d8;
   position: relative;
 }
+
+#services h2 {
+  text-align: center;
+  padding: 70px 0 70px 0;
+}
+
+.quote figure blockquote h4 {
+  font-family: "Spectral";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
 #services .container::before {
   content: " ";
   background-color: #1c6474;
@@ -200,7 +210,7 @@ header nav ul li a img {
   padding: 2em 0;
 }
 
-.service {
+#services .container .service {
   background-color: white;
   max-width: 390px;
   width: 30%;
@@ -213,17 +223,58 @@ header nav ul li a img {
 }
 
 #contact {
-  margin: auto;
+  display: flex;
   background-color: #d8d3a8;
   position: relative;
-  padding-inline: 100px;
-  padding-block: 100px;
+  padding: 100px 0 100px 200px;
 }
 
-#contact .container {
+#contact form {
   display: flex;
+  flex-direction: column;
+  flex: 1;
 }
-.picture.right::before {
+
+#contact form label {
+  cursor: pointer;
+}
+
+#contact form input {
+  background-color: transparent;
+  border: solid 1px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 80%;
+  height: 2.5rem;
+}
+
+#contact form textarea {
+  width: 80%;
+  background-color: transparent;
+  border: solid 1px;
+  height: 7em;
+  margin-bottom: 20px;
+}
+
+#contact form button {
+  background-color: #beb45a;
+  padding: 0.5em 1em;
+  border: solid 1px;
+  width: 80%;
+}
+
+#contact .appareil {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+#contact .appareil img {
+  width: 50%;
+}
+
+#contact .appareil::before {
   content: " ";
   background-color: #beb45a;
   width: 374px;
@@ -233,38 +284,16 @@ header nav ul li a img {
   right: 0;
   z-index: -1;
 }
-.form-container {
-  flex: 2;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  align-items: flex-start;
+
+footer {
+  background-color: #ffffff;
+  color: black;
+  padding: 100px;
 }
 
-form input {
-  width: 100%;
-  background-color: transparent;
-  border: solid 1px;
-  height: 2.5em;
-  margin-bottom: 20px;
+footer .renseignements h4 {
+  font-size: 20px;
 }
-
-form textarea {
-  width: 100%;
-  background-color: transparent;
-  border: solid 1px;
-  height: 5em;
-  line-height: 2.5em;
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-input[type="submit"] {
-  background-color: #beb45a;
-  padding: 0.5em 1em;
-}
-
 @media all and (max-width: 1180px) {
   .picture {
     flex: 2;
