@@ -14,13 +14,13 @@ const nextButton = document.querySelector(".next");
 let counter = 0;
 
 // Les filtres 
-for (let filter of filters) {
+for (let filter of filtersGallery) {
   filter.addEventListener("click", function () {
-    for (let filter of filters) {
+    for (let filter of filtersGallery) {
       filter.classList.remove("active-tag");
     }
     filter.classList.add("active-tag");
-    for (let image of images) {
+    for (let image of imageGallery) {
       if (
         filter.getAttribute("data-gallery-tag") ===
         image.getAttribute("data-gallery-tag") || filter === all
@@ -43,6 +43,11 @@ for (let trigger of modalTriggers) {
     }
   });
 }
+
+function closeModal() {
+  modalContainer.classList.remove("active-modal");
+}
+
 
 //Pour afficher les images de la gallerie dans la modale
 for (let image of imagesOfGallery) {
@@ -77,6 +82,7 @@ function returnImage() {
     image.classList.remove("image-active-in-modal");
   }
   if (counter > 0) {
+    console.log(counter)
     counter--;
   } else {
     counter = imagesCloneInModal.length - 1;
@@ -90,7 +96,7 @@ function nextImage() {
   for (let image of imagesCloneInModal) {
     image.classList.remove("image-active-in-modal");
   }
-
+   console.log(counter)
   if (counter < imagesCloneInModal.length - 1) {
     counter++;
   } else {

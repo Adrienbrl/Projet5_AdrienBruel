@@ -7,6 +7,8 @@ body {
   font-style: normal;
 }
 
+/* EN TETE */
+
 header {
   background-color: white;
   top: 0;
@@ -52,6 +54,8 @@ header nav ul li a img {
   width: 20px;
 }
 
+/* ABOUT */
+
 #about {
   display: flex;
   background-color: #f6d2b8;
@@ -73,7 +77,7 @@ header nav ul li a img {
 #about .nina {
   flex: 1;
   margin: 0 20px;
-  z-index: 0;
+  z-index: 2;
 }
 
 #about .nina img {
@@ -104,8 +108,10 @@ header nav ul li a img {
   margin: 8px 0;
 }
 
+/* GALLERIE, FILTRES ET MODALE */
+
 #gallery {
-  padding: 100px 100px 0;
+  padding: 100px 300px 0;
 }
 
 #gallery h2 {
@@ -156,6 +162,89 @@ header nav ul li a img {
   cursor: pointer;
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 30;
+  display: none;
+}
+
+.modal-container.active-modal {
+  display: block !important;
+}
+
+.modal-container .modal {
+  position: relative;
+  width: 480px;
+  height: 80%;
+  background: white;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  display: flex;
+  align-items: center;
+}
+
+.modal-container .modal img {
+  width: 100%;
+  height: 100%;
+  max-width: 425px;
+  padding: 20px;
+  object-fit: contain;
+  position: relative;
+  display: none;
+}
+
+.modal-container .modal img.image-active-in-modal {
+  display: block;
+  margin: auto;
+}
+
+.modal-container .modal button {
+  font-size: 15px;
+  position: absolute;
+  border-radius: 15%;
+  padding: 0 8px;
+  margin: 0 8px 0 8px;
+  border: solid black 1px;
+  cursor: pointer;
+  background: white;
+  z-index: 31;
+}
+
+.modal-container .modal {
+  position: absolute;
+}
+
+.close-container {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  padding: 10px;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.close-modal {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.return {
+  left: 1px;
+}
+
+.next {
+  right: 2px;
+}
+
+/* QUOTE */
+
 .quote {
   width: 70%;
   padding: 50px 0;
@@ -175,6 +264,15 @@ header nav ul li a img {
   font-size: 2.5rem;
 }
 
+.quote figure blockquote h4 {
+  font-family: "Spectral";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+/* SERVICES */
+
 #services {
   margin: auto;
   background-color: #a8d5d8;
@@ -184,13 +282,6 @@ header nav ul li a img {
 #services h2 {
   text-align: center;
   padding: 70px 0 70px 0;
-}
-
-.quote figure blockquote h4 {
-  font-family: "Spectral";
-  font-style: italic;
-  font-weight: 300;
-  font-size: 2.5rem;
 }
 
 #services .container::before {
@@ -221,6 +312,8 @@ header nav ul li a img {
   justify-content: space-between;
   z-index: 1;
 }
+
+/* FORMULAIRE CONTACT */
 
 #contact {
   display: flex;
@@ -284,6 +377,8 @@ header nav ul li a img {
   right: 0;
   z-index: -1;
 }
+
+/* FOOTER */
 
 footer {
   display: flex;
