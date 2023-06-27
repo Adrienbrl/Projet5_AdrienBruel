@@ -115,8 +115,6 @@ header nav ul li a img {
 #gallery .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
   margin-inline: 200px;
 }
 #gallery ul {
@@ -139,8 +137,8 @@ header nav ul li a img {
   background-color: #5e5d20;
 }
 #gallery .gallery img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
   cursor: pointer;
 }
